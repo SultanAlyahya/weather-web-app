@@ -18,9 +18,6 @@ app.set('view engine', 'hbs')
 app.set("views", "hbs/views")
 app.use(express.static(directoryPath))
 
-app.listen(port,()=>{
-    console.log("the server starts in port "+port)
-})
 
 app.get('', (req, res)=>{
     return res.render('index', {
@@ -86,3 +83,6 @@ app.get("/help/*", (req,res)=>{
 //     })
 // })
 
+app.listen(port,()=>{
+    console.log("the server starts in port "+port)
+})
