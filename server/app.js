@@ -75,13 +75,13 @@ app.get("/help/*", (req,res)=>{
     })
 })
 
-// app.get("/*", (req,res)=>{
-//     console.log("in 404")
-//     res.render("pageNotFound",{
-//         pageName:"page",
-//         name,
-//     })
-// })
+app.get("/*", (req,res)=>{
+    console.log("in 404")
+    res.render("pageNotFound",{
+        pageName:"page",
+        name,
+    })
+})
 
 app.listen(port,()=>{
     console.log("the server starts in port "+port)
