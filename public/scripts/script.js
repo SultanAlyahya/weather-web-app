@@ -4,7 +4,7 @@ const place=document.getElementById('place')
 const forecast=document.getElementById('forecast')
 const form=document.getElementsByTagName('form')
 const locationInPut=document.getElementsByTagName("input")
-
+console.log(form[0])
 
 form[0].addEventListener('submit',(e)=>{
     e.preventDefault()
