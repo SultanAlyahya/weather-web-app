@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <p>
+            this is a static page, i did it by useing the function use served by exress function => "app.use" then
+            in it a I used the origenenal file of express befor makeing it a function and makeing it call "static"
+        </p>
+           <h3> => "app.use(express.static())"</h3>
+
+        <p> 
+            where express came from => const express = require("express") after downloading express
+            and app came from => "const app = express()" where express() it's the same the express that referded
+            befor but we add () after it
+        </p>
+        <p>  
+            to make it more clear after ""const express = require("express")""
+        </p>
+        <p>  
+            we can us express in 2 format 
+        </p>
+        <p>      
+            1-express.function
+        </p>
+        <p>  
+            2-express().function
+        </p>
+        <p>  
+            and it's best to refer the express() to another name like "const app = exoress()"
+        </p> 
+        <p> 
+            then in static I referded to the directory path of the static pages by a packeg "path" served by node
+            then I used the function "join" in path=> path.join to join 2 pathes the firt path is the directory
+            path, I can get it by write "__dirname" it's provide by node for example 
+            console.log(__dirname) will write to the console the path from the hardesk (for example "c:\user\sultan\...")
+            to the directory name (for example I used the file app.js in the directory "sever" it will get the path from 
+            the hardesk location "C" to the directory name "server") the join it with the path ../index it says that
+            go out the directory server then go to the ditrctory index witch has all the static pages so it will be like
+        </p> 
+            <h3>=> "app.use(express.static(path.join(__dirname, "../index")))"</h3>
+        
+        
+    </body>
+</html>
