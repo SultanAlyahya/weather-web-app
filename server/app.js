@@ -5,7 +5,7 @@ const app = express()
 const hbs = require("hbs")
 const spot = require("../utils/spot")
 const weather = require("../utils/getWeather")
-
+const port = process.env.PORT || 3000 
 
 const directoryPath= path.join(__dirname, "../public")
 //console.log(directoryPath)
@@ -18,8 +18,8 @@ app.set('view engine', 'hbs')
 app.set("views", "hbs/views")
 app.use(express.static(directoryPath))
 
-app.listen(3000,()=>{
-    console.log("the server starts in port 3000")
+app.listen(port,()=>{
+    console.log("the server starts in port "+port)
 })
 
 app.get('', (req, res)=>{
